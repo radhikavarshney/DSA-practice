@@ -9,23 +9,31 @@ void print(vector <int> ds){
     cout<<endl;
 }
 
-void subsequence(int i,vector<int> ds,int arr[],int s,int sum, int n){
+bool subsequence(int i,vector<int> ds,int arr[],int s,int sum, int n){
     if(i>=n){
         if(s==sum){
        print(ds);
+        return true;
         }
-        return;
+        else return false;
     }
 
     ds.push_back(arr[i]);
     s+=arr[i];
 
-    subsequence(i+1,ds,arr,s,sum,n);
+    if(subsequence(i+1,ds,arr,s,sum,n)== true)
+    {
+        return true;
+    }
 
     s-=arr[i];
     ds.pop_back();
-    subsequence(i+1,ds,arr,s,sum,n);
+     if(subsequence(i+1,ds,arr,s,sum,n)== true)
+    {
+        return true;
+    }
 
+    return false;
 }
 
 
