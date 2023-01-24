@@ -22,3 +22,5 @@ int main(){
      cout<<countOfSubsequence(0,0,sum,arr,n);
      return 0;
 }
+
+//commit krna hota hai roz!!!!
