@@ -23,4 +23,3 @@ int main(){
      return 0;
 }
 
-//commit krna hota hai roz!!!!
